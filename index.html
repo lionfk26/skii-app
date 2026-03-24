@@ -2,35 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Ski Tracker Pro</title>
-
-  <!-- CSS -->
+  <title>Ski Tracker Local</title>
   <link rel="stylesheet" href="style.css">
-
-  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
-  <!-- Leaflet for map -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-
-  <!-- Chart.js for speed graph -->
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js"></script>
-
-  <!-- Manifest -->
-  <link rel="manifest" href="manifest.json">
 </head>
 <body>
 
 <div class="container">
-  <h1>🏔️ Ski Tracker Pro</h1>
+  <h1>🏔️ Ski Tracker Local</h1>
 
-  <!-- Auth -->
   <div id="auth" class="card">
     <input id="email" type="email" placeholder="Email">
     <input id="password" type="password" placeholder="Password">
@@ -38,9 +21,9 @@
     <button onclick="login()">Login</button>
   </div>
 
-  <!-- App -->
   <div id="app" class="hidden card">
     <button onclick="logout()">Logout</button>
+    <h3>User: <span id="userLabel"></span></h3>
 
     <h3>Runs: <span id="runs">0</span></h3>
     <button onclick="addRun()">+ Run</button>
@@ -65,8 +48,6 @@
   </div>
 </div>
 
-<!-- App JS -->
 <script src="app.js"></script>
-
 </body>
 </html>
