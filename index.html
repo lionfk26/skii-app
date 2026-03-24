@@ -13,9 +13,10 @@
 <div class="container">
   <header>
     <h1>🏔️ Ski Tracker Pro</h1>
-    <p>Track runs, speed & nearest ski resorts</p>
+    <p>Track your runs, speed, and nearby resorts</p>
   </header>
 
+  <!-- Login/Signup -->
   <div id="auth" class="card auth-card">
     <h2>Login / Sign Up</h2>
     <input id="username" type="text" placeholder="Username">
@@ -26,13 +27,18 @@
     </div>
   </div>
 
+  <!-- Dashboard -->
   <div id="app" class="hidden">
     <div class="card dashboard-card">
       <div class="dashboard-header">
-        <h2 id="userLabel">User</h2>
+        <div>
+          <h2 id="userLabel">User</h2>
+          <p id="userStatus">Logged in</p>
+        </div>
         <button class="logout-btn" onclick="logout()">Logout</button>
       </div>
 
+      <!-- Stats -->
       <div class="stats">
         <div class="stat-card">
           <h3>Runs</h3>
@@ -41,11 +47,13 @@
         </div>
       </div>
 
+      <!-- Speed Graph -->
       <div class="section">
         <h3>📊 Speed Graph</h3>
         <canvas id="speedChart"></canvas>
       </div>
 
+      <!-- Map -->
       <div class="section">
         <h3>🗺️ Ski Map</h3>
         <button class="start-btn" onclick="startTracking()">Start Ski</button>
@@ -53,6 +61,7 @@
         <p id="location">Nearest resort will appear here</p>
       </div>
 
+      <!-- Leaderboard -->
       <div class="section">
         <h3>🏆 Leaderboard</h3>
         <ul id="leaderboard"></ul>
