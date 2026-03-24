@@ -1,53 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Ski Tracker Local</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<meta charset="UTF-8">
+<title>Ski Tracker Pro</title>
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-
 <div class="container">
-  <h1>🏔️ Ski Tracker Local</h1>
+  <h1>🏔️ Ski Tracker Pro</h1>
 
-  <div id="auth" class="card">
+  <!-- AUTH -->
+  <div id="auth" class="card auth-card">
+    <h2>Login / Sign Up</h2>
     <input id="email" type="email" placeholder="Email">
     <input id="password" type="password" placeholder="Password">
-    <button onclick="signup()">Sign Up</button>
-    <button onclick="login()">Login</button>
+    <div class="button-group">
+      <button onclick="signup()">Sign Up</button>
+      <button onclick="login()">Login</button>
+    </div>
   </div>
 
-  <div id="app" class="hidden card">
-    <button onclick="logout()">Logout</button>
-    <h3>User: <span id="userLabel"></span></h3>
+  <!-- DASHBOARD -->
+  <div id="app" class="hidden">
+    <div class="card dashboard-card">
+      <div class="top-row">
+        <h2 id="userLabel">User</h2>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+      </div>
 
-    <h3>Runs: <span id="runs">0</span></h3>
-    <button onclick="addRun()">+ Run</button>
+      <div class="stats">
+        <div class="stat-card">
+          <h3>Runs</h3>
+          <p id="runs">0</p>
+          <button onclick="addRun()">+ Run</button>
+        </div>
+      </div>
 
-    <hr>
+      <div class="section">
+        <h3>📊 Speed Graph</h3>
+        <canvas id="speedChart"></canvas>
+      </div>
 
-    <h3>📊 Speed Graph</h3>
-    <canvas id="speedChart"></canvas>
+      <div class="section">
+        <h3>🗺️ Route Tracking</h3>
+        <button onclick="startTracking()">Start Ski</button>
+        <div id="map"></div>
+        <p id="location">Nearest resort will appear here</p>
+      </div>
 
-    <hr>
-
-    <h3>🗺️ Route Tracking</h3>
-    <button onclick="startTracking()">Start Ski</button>
-    <div id="map"></div>
-
-    <p id="location">Nearest resort will appear here</p>
-
-    <hr>
-
-    <h3>🏆 Leaderboard</h3>
-    <ul id="leaderboard"></ul>
+      <div class="section">
+        <h3>🏆 Leaderboard</h3>
+        <ul id="leaderboard"></ul>
+      </div>
+    </div>
   </div>
 </div>
-
 <script src="app.js"></script>
 </body>
 </html>
