@@ -9,27 +9,14 @@ body {
   min-height: 100vh;
 }
 
-.container {
-  max-width: 550px;
-  width: 100%;
-}
+.container { max-width: 600px; width: 100%; }
 
 /* Header */
-header {
-  text-align: center;
-  margin-bottom: 20px;
-}
-header h1 {
-  color: #1b3a6b;
-  font-weight: 700;
-  margin: 0;
-}
-header p {
-  color: #1b3a6b;
-  font-weight: 400;
-}
+header { text-align: center; margin-bottom: 20px; }
+header h1 { color: #1b3a6b; font-weight: 700; margin: 0; }
+header p { color: #1b3a6b; font-weight: 400; }
 
-/* Card Design */
+/* Cards */
 .card {
   background: #ffffff;
   border-radius: 25px;
@@ -38,11 +25,9 @@ header p {
   box-shadow: 0 20px 35px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
-.card:hover {
-  transform: translateY(-3px);
-}
+.card:hover { transform: translateY(-3px); }
 
-/* Auth Card */
+/* Auth */
 .auth-card input {
   width: 80%;
   padding: 12px 15px;
@@ -50,12 +35,8 @@ header p {
   border-radius: 15px;
   border: 1px solid #a0cfff;
   font-size: 16px;
-  outline: none;
 }
-.auth-card input:focus {
-  border-color: #1b3a6b;
-  box-shadow: 0 0 10px rgba(27,58,107,0.3);
-}
+.auth-card input:focus { border-color: #1b3a6b; box-shadow: 0 0 10px rgba(27,58,107,0.3); }
 .button-group button {
   margin: 10px 5px;
   padding: 12px 25px;
@@ -67,9 +48,7 @@ header p {
   cursor: pointer;
   transition: background 0.3s;
 }
-.button-group button:hover {
-  background: #0f2548;
-}
+.button-group button:hover { background: #0f2548; }
 
 /* Dashboard */
 .dashboard-header {
@@ -78,6 +57,7 @@ header p {
   align-items: center;
   margin-bottom: 15px;
 }
+#userStatus { font-size: 14px; color: #00509e; margin: 0; }
 .logout-btn {
   background: #ff4b5c;
   color: #fff;
@@ -112,18 +92,8 @@ header p {
 
 /* Sections */
 .section { margin-top: 25px; text-align: center; }
-#map {
-  height: 250px;
-  border-radius: 20px;
-  margin-top: 10px;
-  border: 2px solid #1b3a6b;
-}
-canvas {
-  margin-top: 10px;
-  border-radius: 15px;
-  background: #f0f8ff;
-  padding: 10px;
-}
+#map { height: 250px; border-radius: 20px; margin-top: 10px; border: 2px solid #1b3a6b; }
+canvas { margin-top: 10px; border-radius: 15px; background: #f0f8ff; padding: 10px; }
 
 /* Leaderboard */
 ul { list-style: none; padding: 0; margin: 0; }
@@ -138,10 +108,8 @@ li {
 }
 li:hover { transform: translateX(5px); }
 
-/* Location */
+/* Location & Buttons */
 #location { margin-top: 10px; font-weight: 700; color: #00509e; font-size: 16px; }
-
-/* Start Ski Button */
 .start-btn {
   background: #1b3a6b;
   color: #fff;
