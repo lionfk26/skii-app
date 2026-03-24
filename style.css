@@ -1,0 +1,135 @@
+/* GLOBAL STYLING */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+}
+
+/* CARD DESIGN */
+.card {
+  background: linear-gradient(145deg, #ffffff, #d0eaff);
+  padding: 25px;
+  border-radius: 25px;
+  margin-top: 20px;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+/* HIDDEN ELEMENTS */
+.hidden { display: none; }
+
+/* INPUT FIELDS */
+input {
+  padding: 12px 15px;
+  border-radius: 15px;
+  border: 1px solid #a0cfff;
+  width: 80%;
+  margin: 10px 0;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+  border-color: #2b7cff;
+  box-shadow: 0 0 10px rgba(43, 124, 255, 0.3);
+}
+
+/* BUTTONS */
+button {
+  margin-top: 15px;
+  padding: 12px 25px;
+  border-radius: 20px;
+  border: none;
+  background: #2b7cff;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.2s, transform 0.1s;
+}
+
+button:hover {
+  background: #1a5fcc;
+  transform: translateY(-2px);
+}
+
+/* MAP STYLING */
+#map {
+  height: 280px;
+  margin-top: 15px;
+  border-radius: 20px;
+  border: 2px solid #2b7cff;
+}
+
+/* SPEED CHART */
+canvas {
+  margin-top: 10px;
+  border-radius: 15px;
+  background: #f0faff;
+  padding: 10px;
+}
+
+/* LEADERBOARD */
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: #f3f8ff;
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 15px;
+  font-weight: 500;
+  color: #333;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+li:hover {
+  transform: translateX(5px);
+}
+
+/* HEADINGS */
+h1 {
+  font-size: 2em;
+  color: #2b7cff;
+  margin-bottom: 15px;
+}
+
+h3 {
+  color: #1f4e8c;
+  margin-bottom: 10px;
+}
+
+/* LOCATION TEXT */
+#location {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #00509e;
+  font-size: 16px;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 480px) {
+  .card { padding: 20px; }
+  input { width: 90%; font-size: 14px; }
+  button { width: 90%; font-size: 14px; padding: 10px; }
+  #map { height: 220px; }
+}
