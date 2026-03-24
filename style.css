@@ -1,7 +1,8 @@
+/* General */
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(to bottom, #e0f7ff, #ffffff);
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(to bottom, #e6f7ff, #ffffff);
   display: flex;
   justify-content: center;
   padding: 20px;
@@ -9,78 +10,123 @@ body {
 }
 
 .container {
+  max-width: 550px;
   width: 100%;
-  max-width: 500px;
-  text-align: center;
 }
 
-h1 {
-  font-size: 2em;
-  color: #2b7cff;
+/* Header */
+header {
+  text-align: center;
   margin-bottom: 20px;
 }
-h2 { font-weight: 600; color: #1f4e8c; }
-h3 { color: #1f4e8c; margin-bottom: 10px; }
+header h1 {
+  color: #1b3a6b;
+  font-weight: 700;
+  margin: 0;
+}
+header p {
+  color: #1b3a6b;
+  font-weight: 400;
+}
 
+/* Card Design */
 .card {
-  background: linear-gradient(145deg, #ffffff, #d0eaff);
-  padding: 25px;
+  background: #ffffff;
   border-radius: 25px;
-  margin-top: 20px;
-  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+  padding: 25px;
+  margin-bottom: 20px;
+  box-shadow: 0 20px 35px rgba(0,0,0,0.1);
   transition: transform 0.2s;
 }
-.card:hover { transform: translateY(-2px); }
+.card:hover {
+  transform: translateY(-3px);
+}
 
+/* Auth Card */
 .auth-card input {
+  width: 80%;
   padding: 12px 15px;
+  margin: 10px 0;
   border-radius: 15px;
   border: 1px solid #a0cfff;
-  width: 80%;
-  margin: 10px 0;
   font-size: 16px;
   outline: none;
 }
 .auth-card input:focus {
-  border-color: #2b7cff;
-  box-shadow: 0 0 10px rgba(43,124,255,0.3);
+  border-color: #1b3a6b;
+  box-shadow: 0 0 10px rgba(27,58,107,0.3);
 }
-
 .button-group button {
-  margin: 10px 5px 0 5px;
+  margin: 10px 5px;
   padding: 12px 25px;
   border-radius: 20px;
   border: none;
-  background: #2b7cff;
-  color: white;
+  background: #1b3a6b;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.button-group button:hover {
+  background: #0f2548;
+}
+
+/* Dashboard */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.logout-btn {
+  background: #ff4b5c;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 15px;
+  border: none;
   font-weight: 600;
   cursor: pointer;
 }
-.button-group button:hover { background: #1a5fcc; }
-
-.dashboard-card .top-row { display: flex; justify-content: space-between; align-items: center; }
-.logout-btn {
-  background: #ff4b5c;
-  padding: 8px 15px;
-  border-radius: 15px;
-}
 .logout-btn:hover { background: #d93646; }
 
+/* Stats */
 .stats { display: flex; justify-content: space-around; margin: 15px 0; }
 .stat-card {
-  background: #f0faff;
+  background: #f0f8ff;
   border-radius: 20px;
   padding: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.05);
   width: 45%;
+  text-align: center;
 }
 .stat-card p { font-size: 2em; margin: 10px 0; }
+.stat-card button {
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: none;
+  background: #1b3a6b;
+  color: #fff;
+  cursor: pointer;
+}
+.stat-card button:hover { background: #0f2548; }
 
-.section { margin-top: 20px; }
-#map { height: 250px; border-radius: 20px; margin-top: 10px; border: 2px solid #2b7cff; }
-canvas { margin-top: 10px; border-radius: 15px; background: #f0faff; padding: 10px; }
+/* Sections */
+.section { margin-top: 25px; text-align: center; }
+#map {
+  height: 250px;
+  border-radius: 20px;
+  margin-top: 10px;
+  border: 2px solid #1b3a6b;
+}
+canvas {
+  margin-top: 10px;
+  border-radius: 15px;
+  background: #f0f8ff;
+  padding: 10px;
+}
 
-ul { list-style: none; padding: 0; }
+/* Leaderboard */
+ul { list-style: none; padding: 0; margin: 0; }
 li {
   background: #f3f8ff;
   margin: 8px 0;
@@ -92,13 +138,28 @@ li {
 }
 li:hover { transform: translateX(5px); }
 
-#location { margin-top: 10px; font-weight: 600; color: #00509e; font-size: 16px; }
+/* Location */
+#location { margin-top: 10px; font-weight: 700; color: #00509e; font-size: 16px; }
 
+/* Start Ski Button */
+.start-btn {
+  background: #1b3a6b;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+.start-btn:hover { background: #0f2548; }
+
+/* Hidden */
+.hidden { display: none; }
+
+/* Responsive */
 @media screen and (max-width: 480px) {
-  .card { padding: 20px; }
   .auth-card input { width: 90%; font-size: 14px; }
-  .button-group button, .logout-btn { width: 90%; font-size: 14px; padding: 10px; }
+  .button-group button, .logout-btn, .start-btn { width: 90%; font-size: 14px; padding: 10px; }
   #map { height: 220px; }
 }
-
-.hidden { display:none; }
