@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Keyboard Key Checker</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Keyboard Key Checker</h1>
+    <p>
+      Point your camera at a keyboard and press “Scan Keyboard”.
+      The app will try to detect upside-down / backwards keycaps.
+    </p>
+
+    <video id="video" autoplay playsinline></video>
+    <canvas id="overlay"></canvas>
+
+    <div class="controls">
+      <button id="startBtn">Start Camera</button>
+      <button id="scanBtn">Scan Keyboard</button>
+    </div>
+
+    <div id="status">Camera not started.</div>
+
+    <div class="results">
+      <h2>Detected Problems</h2>
+      <ul id="issues"></ul>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
